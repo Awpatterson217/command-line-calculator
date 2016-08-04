@@ -9,7 +9,7 @@ public class Test {
 	public static void main(String[] args){
 		int counter = 0;
 		
-		// Initializes the program and executes the the selected operation on firstNum and nextNum.
+		// Initializes the program and executes the selected operation on firstNum and nextNum.
 		// The answer is stored privately in the RunningCalculations class, in a private variable called currentAnswer.
 		Methods.startCalc();
 		
