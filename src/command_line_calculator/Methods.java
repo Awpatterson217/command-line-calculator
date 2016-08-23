@@ -46,6 +46,7 @@ public class Methods {
 		System.out.print("Current answer: ");
 		System.out.println(runningAnswer.getCurrentAnswer());
 		
+		userInput.close();
 	} // End startCalc.
 	
 	// The keepGoing method is the second and last method executed.
@@ -70,5 +71,7 @@ public class Methods {
 		runningAnswer.nextCalc(operator1, nextNumber);
 		System.out.print("Current Answer: ");
 		System.out.println(runningAnswer.getCurrentAnswer());
+		
+		userInput.close();
 	} // End keepGoing.
-}
+} // End Methods class.

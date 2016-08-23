@@ -15,19 +15,19 @@ public class RunningCalculations {
 		switch(Integer.valueOf(theOperator)){
 		case 1:
 			currentAnswer = firstNum + nextNum;
-			setCurrentAnswer(currentAnswer);
+
 			break; 
 		case 2:
 			currentAnswer = firstNum - nextNum;
-			setCurrentAnswer(currentAnswer);
+
 			break;
 		case 3:
 			currentAnswer = firstNum * nextNum;
-			setCurrentAnswer(currentAnswer);
+	
 			break;
 		case 4:
 			currentAnswer = firstNum / nextNum;
-			setCurrentAnswer(currentAnswer);
+
 			break;
 		default:
 			System.out.println("ERROR: Invalid Operator");
@@ -40,19 +40,18 @@ public class RunningCalculations {
 		switch(Integer.valueOf(theOperator)){
 		case 1:
 			currentAnswer = currentAnswer + nextNum;
-			setCurrentAnswer(currentAnswer);
+		
 			break;
 		case 2:
 			currentAnswer = currentAnswer - nextNum;
-			setCurrentAnswer(currentAnswer);
+
 			break;
 		case 3:
 			currentAnswer = currentAnswer * nextNum;
-			setCurrentAnswer(currentAnswer);
 			break;
 		case 4:
 			currentAnswer = currentAnswer / nextNum;
-			setCurrentAnswer(currentAnswer);
+	
 			break;
 		default:
 			System.out.println("ERROR: Invalid Operator");
