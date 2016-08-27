@@ -9,13 +9,14 @@ package command_line_calculator;
 import java.util.Scanner;
 
 public class Methods {
+	static Scanner userInput = new Scanner(System.in);
 	
 	// The startCalc method is the first method executed.
 	static void startCalc(){
 		
 		// An instance of the RunningCalculation class.
 		RunningCalculations runningAnswer = new RunningCalculations();
-		Scanner userInput = new Scanner(System.in);
+		
 		
 		// A simple menu which presents the user with a key, each operator is associated with a number.
 		// More operators can be added.
@@ -46,20 +47,20 @@ public class Methods {
 		System.out.print("Current answer: ");
 		System.out.println(runningAnswer.getCurrentAnswer());
 		
-		userInput.close();
+		
 	} // End startCalc.
 	
 	// The keepGoing method is the second and last method executed.
 	// This method can be looped endlessly.
 	static void keepGoing(){
-		Scanner userInput = new Scanner(System.in);
+	
 		
 		// Creates an instance of the RunningCalculations class.
 		RunningCalculations runningAnswer = new RunningCalculations();
 		
 		// Allows the user to perform another operation on a new number(nextNum) and currentAnswer.
 		System.out.println("Next operator: ");
-		int operator1 = userInput.nextInt();
+		int nextOperator = userInput.nextInt();
 		System.out.print("\n");
 
 		// Allows the user to enter the next number.
@@ -68,10 +69,11 @@ public class Methods {
 		System.out.print("\n");
 
 		// Performs the nextCalc method.
-		runningAnswer.nextCalc(operator1, nextNumber);
+		runningAnswer.nextCalc(nextOperator, nextNumber);
 		System.out.print("Current Answer: ");
 		System.out.println(runningAnswer.getCurrentAnswer());
 		
-		userInput.close();
+	
 	} // End keepGoing.
+	
 } // End Methods class.

@@ -7,7 +7,7 @@
 package command_line_calculator;
 
 public class RunningCalculations {
-	static double currentAnswer;
+	private double currentAnswer;
 
 	// Takes in three variables (firstNum, calculation choice, NextNum). 
 	//  Where n = 1,2,3 or 4: (1 = +)(2 = -)(3 = *)(4 = /).
@@ -26,8 +26,10 @@ public class RunningCalculations {
 	
 			break;
 		case 4:
-			currentAnswer = firstNum / nextNum;
-
+			if(firstNum > 0){currentAnswer = firstNum / nextNum;}
+			
+			else{System.out.println("ERROR: Division by zero");}
+			
 			break;
 		default:
 			System.out.println("ERROR: Invalid Operator");
@@ -48,9 +50,12 @@ public class RunningCalculations {
 			break;
 		case 3:
 			currentAnswer = currentAnswer * nextNum;
+			
 			break;
 		case 4:
-			currentAnswer = currentAnswer / nextNum;
+			if(currentAnswer > 0){currentAnswer = currentAnswer / nextNum;}
+			
+			else{System.out.println("ERROR: Division by zero");}
 	
 			break;
 		default:
@@ -58,12 +63,6 @@ public class RunningCalculations {
 		} // End switch.
 	} // End nextCalc.
 
-    void setCurrentAnswer(double currentAnswer) {
-		RunningCalculations.currentAnswer = currentAnswer;
-	} // End setter.
-	
-	double getCurrentAnswer() {
-		return currentAnswer;
-		
-	} // End getter.
-}
+
+	double getCurrentAnswer() {return currentAnswer;} 
+}// End RunningCalculations class
