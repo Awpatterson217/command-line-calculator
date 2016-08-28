@@ -13,14 +13,13 @@ public class Test {
 		// The answer is stored privately in the RunningCalculations class, in a private variable called currentAnswer.
 		Methods.startCalc();
 		
-		// This application is currently set to handle up to 10 numbers.
+		// This application is currently set to handle up to 10 calculations.
 		while(counter <= 10){
 			
-		// The keepGoing method executes the selected operation on the values of currentAnswer and nextNum.	
-		// This method loops continuously until the user either enters CTRL-C, or counter = 10.  
+		// The keepGoing method executes the selected operation on the values of currentAnswer and nextNum.	  
 	    Methods.keepGoing();
 		counter++;
 		
-		} // End while loop.
+		}
 	} // End main method.
 } // End Test class.

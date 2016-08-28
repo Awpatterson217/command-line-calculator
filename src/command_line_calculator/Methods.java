@@ -1,7 +1,6 @@
 /*
- *  The Methods class contains the startCalc method, and the keepGoing method. These methods are static.
- *  Currently these methods are executed in the main method in the Test class, but
- *  these methods could easily be manipulated to use in a GUI.
+ *  The Methods class contains the two static methods, startCalc() and nextCalc(). 
+ *  
  */
 
 package command_line_calculator;
@@ -21,10 +20,10 @@ public class Methods {
 		// A simple menu which presents the user with a key, each operator is associated with a number.
 		// More operators can be added.
 		System.out.println("Operators");
-		System.out.println("1: Plus");
-		System.out.println("2: Subtract");
-		System.out.println("3: Multiply");
-		System.out.println("4: Divide");
+		System.out.println("+: Plus");
+		System.out.println("-: Subtract");
+		System.out.println("*: Multiply");
+		System.out.println("/: Divide");
 		System.out.print("\n");
 		
 		// Captures the first number. 
@@ -34,7 +33,7 @@ public class Methods {
 
 		// Captures the operation the user wishes to perform.
 		System.out.println("Operator: ");
-		int operator1 = userInput.nextInt();
+		String firstOperator = userInput.next();
 		System.out.print("\n");
 
 		// Captures the second number.
@@ -43,7 +42,7 @@ public class Methods {
 		System.out.print("\n");
 		
 		// Executes the firstCalc method. This method takes values in the same order captured. 
-		runningAnswer.firstCalc(num1, operator1, num2);
+		runningAnswer.firstCalc(num1, firstOperator, num2);
 		System.out.print("Current answer: ");
 		System.out.println(runningAnswer.getCurrentAnswer());
 		
@@ -60,7 +59,7 @@ public class Methods {
 		
 		// Allows the user to perform another operation on a new number(nextNum) and currentAnswer.
 		System.out.println("Next operator: ");
-		int nextOperator = userInput.nextInt();
+		String nextOperator = userInput.next();
 		System.out.print("\n");
 
 		// Allows the user to enter the next number.

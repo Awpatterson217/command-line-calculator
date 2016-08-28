@@ -10,22 +10,21 @@ public class RunningCalculations {
 	private double currentAnswer;
 
 	// Takes in three variables (firstNum, calculation choice, NextNum). 
-	//  Where n = 1,2,3 or 4: (1 = +)(2 = -)(3 = *)(4 = /).
-	protected void firstCalc(double firstNum, int theOperator, double nextNum){
-		switch(Integer.valueOf(theOperator)){
-		case 1:
+	protected void firstCalc(double firstNum, String theOperator, double nextNum){
+		switch(theOperator){
+		case "+":
 			currentAnswer = firstNum + nextNum;
 
 			break; 
-		case 2:
+		case "-":
 			currentAnswer = firstNum - nextNum;
 
 			break;
-		case 3:
+		case "*":
 			currentAnswer = firstNum * nextNum;
 	
 			break;
-		case 4:
+		case "/":
 			if(firstNum > 0){currentAnswer = firstNum / nextNum;}
 			
 			else{System.out.println("ERROR: Division by zero");}
@@ -33,26 +32,25 @@ public class RunningCalculations {
 			break;
 		default:
 			System.out.println("ERROR: Invalid Operator");
-		} // End switch.
+		} 
 	} // End firstCalc.
 	
 	// Takes in two variables (calculation choice, nextNum).
-	//  Where n = 1,2,3 or 4: (1 = +)(2 = -)(3 = *)(4 = /).
-	protected void nextCalc(int theOperator, double nextNum){
-		switch(Integer.valueOf(theOperator)){
-		case 1:
+	protected void nextCalc(String theOperator, double nextNum){
+		switch(theOperator){
+		case "+":
 			currentAnswer = currentAnswer + nextNum;
 		
 			break;
-		case 2:
+		case "-":
 			currentAnswer = currentAnswer - nextNum;
 
 			break;
-		case 3:
+		case "*":
 			currentAnswer = currentAnswer * nextNum;
 			
 			break;
-		case 4:
+		case "/":
 			if(currentAnswer > 0){currentAnswer = currentAnswer / nextNum;}
 			
 			else{System.out.println("ERROR: Division by zero");}
@@ -60,7 +58,7 @@ public class RunningCalculations {
 			break;
 		default:
 			System.out.println("ERROR: Invalid Operator");
-		} // End switch.
+		} 
 	} // End nextCalc.
 
 
