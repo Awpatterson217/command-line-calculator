@@ -7,19 +7,18 @@ package command_line_calculator;
 
 public class Test {
 	public static void main(String[] args){
-		int counter = 0;
+		boolean calcOn = true;
 		
 		// Initializes the program and executes the selected operation on firstNum and nextNum.
 		// The answer is stored privately in the RunningCalculations class, in a private variable called currentAnswer.
 		Methods.startCalc();
 		
-		// This application is currently set to handle up to 10 calculations.
-		while(counter <= 10){
+		// This application loops endlessly.
+		while(calcOn){
 			
-		// The keepGoing method executes the selected operation on the values of currentAnswer and nextNum.	  
-	    Methods.keepGoing();
-		counter++;
-		
+		// keepGoing() executes the selected operation on currentAnswer and nextNum.	  
+	    Methods.keepGoing();	
 		}
+		
 	} // End main method.
 } // End Test class.
