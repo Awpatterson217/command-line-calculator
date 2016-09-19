@@ -7,7 +7,7 @@
 package command_line_calculator;
 
 public class RunningCalculations {
-	private double currentAnswer;
+	public static double currentAnswer;
 
 	// Takes in three variables (firstNum, calculation choice, NextNum). 
 	protected void firstCalc(double firstNum, String theOperator, double nextNum){
